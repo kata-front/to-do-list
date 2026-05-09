@@ -1,9 +1,7 @@
 import { useState, type FC } from "react";
-import { useSelector } from "react-redux";
-import tasksSlice from "./tasks.slice..ts";
 import type { Task } from "../../utils/types.ts";
 import { useAppDispatch } from "../../utils/store.ts";
-import { createTaskThunk } from "../../utils/createTaskThunk.ts";
+import { createTaskThunk } from "../../utils/thunks/createTaskThunk.ts";
 import TaskList from "../TaskList/TaskList.tsx";
 
 const App: FC = () => {

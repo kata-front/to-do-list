@@ -11,8 +11,11 @@ const tasksSlice = createSlice({
     createTask: (state: Task[], action: PayloadAction<Task>) => {
       state.push(action.payload);
     },
+    initTasks: (state: Task[], action: PayloadAction<Task[]>) => {
+      state.push(...action.payload);
+    },
   },
-});
+}); 
 
 export const { createTask } = tasksSlice.actions;
 export default tasksSlice;

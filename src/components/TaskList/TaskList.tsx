@@ -1,6 +1,6 @@
 import { memo, type FC } from "react";
 import { useSelector } from "react-redux";
-import tasksSlice from "../TaskComponent/tasks.slice.";
+import tasksSlice from "../TaskComponent/tasks.slice.ts";
 import TaskItem from "../TaskItem/TaskItem";
 
 const TaskList: FC = memo(() => {

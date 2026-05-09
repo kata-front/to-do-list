@@ -1,5 +1,7 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
-import App from "./components/App";
+import App from "./components/TaskComponent/TaskComponent";
+import { store } from "./utils/store";
+import initStoreThunk from "./utils/thunks/initStoreThunk";
 
 const Router = createBrowserRouter([
     {
@@ -10,7 +12,10 @@ const Router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <App />
+                element: <App />,
+                loader: () => {
+                    return store.dispatch(initStoreThunk())
+                }
             }
         ]
     }
