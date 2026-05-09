@@ -1,4 +1,4 @@
-import tasksSlice from "../../components/TaskComponent/tasks.slice.ts";
+import tasksSlice from "../../components/Tasks/TaskComponent/tasks.slice.ts";
 import { Api } from "../api";
 import type { AppThunk } from "../store";
 

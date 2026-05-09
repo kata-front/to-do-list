@@ -1,5 +1,5 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type { Task } from "../../utils/types";
+import type { Task } from "../../../utils/types";
 
 const tasksSlice = createSlice({
   name: "tasks",
@@ -14,6 +14,13 @@ const tasksSlice = createSlice({
     initTasks: (state: Task[], action: PayloadAction<Task[]>) => {
       state.push(...action.payload);
     },
+    changeTaskSuccessed: (state: Task[], action: PayloadAction<number>) => {
+      state.map(task => {
+            task.id === action.payload 
+                ? task.completed = !task.completed
+                : task
+        })
+    }
   },
 }); 
 

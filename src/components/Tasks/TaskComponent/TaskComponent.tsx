@@ -1,7 +1,7 @@
 import { useState, type FC } from "react";
-import type { Task } from "../../utils/types.ts";
-import { useAppDispatch } from "../../utils/store.ts";
-import { createTaskThunk } from "../../utils/thunks/createTaskThunk.ts";
+import type { Task } from "../../../utils/types.ts";
+import { useAppDispatch } from "../../../utils/store.ts";
+import { createTaskThunk } from "../../../utils/thunks/createTaskThunk.ts";
 import TaskList from "../TaskList/TaskList.tsx";
 
 const App: FC = () => {
@@ -24,7 +24,7 @@ const App: FC = () => {
 
   return (
     <div>
-      <h1>Todo List</h1>
+      <h1 data-testid="title">Todo List</h1>
       <div>
         <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" />
         <button onClick={handler}>Add</button>
