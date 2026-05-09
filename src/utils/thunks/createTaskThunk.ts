@@ -1,5 +1,5 @@
 import type { Task } from "../types";
-import tasksSlice from "../../components/TaskComponent/tasks.slice.ts";
+import tasksSlice from "../../components/Tasks/TaskComponent/tasks.slice.ts";
 import type { AppThunk } from "../store";
 import { Api } from "../api";
 
