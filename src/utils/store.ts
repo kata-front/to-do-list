@@ -1,6 +1,6 @@
 import { configureStore, type ThunkAction, type UnknownAction } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
-import tasksSlice from "../components/TaskComponent/tasks.slice.";
+import tasksSlice from "../components/TaskComponent/tasks.slice.ts";
 import { Router } from "react-router-dom";
 
 const extraArguments = {
